@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --center-align: center;
+    --width-100: 100%;
+    --white-color: #fff;
+}
+
+
+
+/* HTML Tags */
+
+body {
+    /* width: 599px; */
+    text-align: center;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+
+/* Navigation Bar */
+
+#navigation {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, rgba(255, 0, 73, 1) 0%, rgb(255, 64, 147) 100%);
+    color: var(--white-color);
+}
+
+#navigation>a {
+    color: var(--white-color) !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-bar {
+    width: var(--width-100);
+    position: absolute;
+    top: 4.85rem;
+    left: 0;
+    background: linear-gradient(-45deg, rgba(255, 0, 73, 1) 0%, rgb(255, 64, 147) 100%);
+    color: var(--white-color);
+    padding: 1rem 0;
+}
+
+/* .nav-bar>ul {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: var(--center-align);
+    color: var(--white-color);
+} */
+
+.nav-bar>ul>li>a {
+    color: var(--white-color) !important;
+    text-transform: lowercase;
+}
+
+#logo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+
+
+/* Hero Section */
+
+/* #hero-section {
+    background-image: url('https://wallpapers.com/images/featured/4k-marvel-awrqh8lcgyk3crjc.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+
+
+/* Main Section */
+
+.movie-card {
+    width: var(--width-100);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: var(--center-align);
+    align-items: var(--center-align);
+    text-align: var(--center-align);
+    padding: 1rem 0;
+}
+
+.mobile-view {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.mobile-view>h2 {
+    padding: 0 0 2rem;
+}
+
+.desktop-view {
+    display: none !important;
+}
+
+.movie-item {
+    padding: 0 4rem 2rem;
+}
+
+.movie-item>img {
+    width: 62vw;
+    height: 80vw;
+    border-radius: 0.5rem;
+    margin: 0.2rem;
+}
+
+.mv-rating {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: var(--center-align);
+}
+
+.mv-rating>p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+
+/* Best Movies */
+
+#bst-mvs {
+    background: linear-gradient(240deg, rgb(139, 12, 50) 0%, rgb(0, 0, 0) 100%);
+    color: var(--white-color);
+}
+
+/* My Favourites */
+
+#my-fav {
+
+    background: linear-gradient(120deg, rgb(179, 11, 59) 0%, rgb(42, 0, 0) 100%);
+    color: var(--white-color);
+}
+
+/* Most Watched */
+
+#mst-wtchd {
+    background: linear-gradient(120deg, rgb(97, 3, 30) 0%, rgb(0, 0, 0) 100%);
+    color: var(--white-color);
+}
+
+#footer {
+    padding: 2rem 0 1rem;
+    text-align: center;
+    background: #252525;
+    color: #dbdbdb;
+}
+
+#footer>p {
+    font-size: 1rem;
+}
+
+
+@media screen and (min-width: 780px) {
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .nav-bar>ul>li>a {
+        display: inline-block;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        text-transform: lowercase;
+        color: #f0e9e9 !important;
+        transition: all 0.3s;
+    }
+
+    .nav-bar-desktop>ul>li>a:hover {
+        color: var(--white-color) !important;
+    }
+
+    .movie-card {
+        width: var(--width-100);
+        display: flex;
+        flex-flow: row rap;
+        justify-content: var(--center-align);
+        align-items: var(--center-align);
+        text-align: var(--center-align);
+        padding: 1rem 0;
+    }
+
+    .mobile-view {
+        display: none !important;
+    }
+
+    .desktop-view {
+        display: flex !important;
+        padding: 5rem 5%;
+    }
+
+    .desktop-view>h2 {
+        padding: 0 0 5rem;
+    }
+
+    .movie-item {
+        padding: 0;
+    }
+
+    .movie-item>img {
+        width: 15rem;
+        height: 20rem;
+        border-radius: 0.5rem;
+        margin: 0;
+    }
+
+    .movie-item>h3 {
+        width: 12rem;
+        margin: auto;
+        padding: 0.5rem 0;
+    }
+
+    #bst-mvs-dsktp {
+        background: linear-gradient(240deg, rgb(139, 12, 50) 0%, rgb(0, 0, 0) 100%);
+        color: var(--white-color);
+    }
+
+    /* My Favourites */
+
+    #my-fav-dsktp {
+
+        background: linear-gradient(120deg, rgb(179, 11, 59) 0%, rgb(42, 0, 0) 100%);
+        color: var(--white-color);
+    }
+
+    /* Most Watched */
+
+    #mst-wtchd-dsktp {
+        background: linear-gradient(120deg, rgb(97, 3, 30) 0%, rgb(0, 0, 0) 100%);
+        color: var(--white-color);
+    }
+
+}
+
+
+@media screen and (min-width: 991px) {
+
+    .nav-bar {
+        background: none;
+        position: static;
+        color: var(--white-color);
+        padding: 1rem 0;
+    }
+
+}
